@@ -1,0 +1,543 @@
+body {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #222222;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+section {
+    text-align: justify;
+}
+
+.header-content-image-container, .header-content {
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5px;
+}
+
+.header-content-image-container {
+    background: #000000;
+}
+
+.header-content {
+    background: #184144;
+    color: #FFF;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav ul li a.active {
+    color: orange; 
+    font-weight: bold; 
+    border-bottom: 2px solid #FFA500; 
+}
+
+a, a:link {
+    color: rgb(200, 255, 255);
+}
+
+a:visited {
+    color: rgb(254, 230, 255);
+}
+
+a:hover {
+    color: rgb(147, 255, 255);
+}
+
+#menu a {
+    color: white;
+}
+
+#menu a:hover, #table a:hover {
+    color: rgb(147, 255, 255);
+}
+
+#table a{
+    color: rgb(186, 255, 255);
+}
+#table a:visited{
+    color: rgb(254, 230, 255);
+}
+
+.main-content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.main-content p {
+    font-size: 1.2rem;
+    color: #FFF;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#table td, table th {
+    text-align: center;
+    border: 1px solid #DDD;
+    padding: 8px;
+}
+
+.video, .faq {
+    padding: 20px;
+    text-align: center;
+    background-color: #444;
+}
+
+.faq {
+    background-color: #555;
+    line-height: 1.6;
+}
+
+.footer-content {
+    background: #000000;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.side-images {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+}
+
+.side-images img {
+    width: 100%;
+    opacity: 0.7;
+}
+
+.side-images-left, .side-images-right {
+    position: fixed;
+    width: 15%;
+    top: 0;
+    bottom: 0;
+}
+
+.side-images-left {
+    left: 0;
+}
+
+.side-images-right {
+    right: 0;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header, footer {
+    width: 100%;
+    text-align: center;
+    background: #000;
+}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {
+    opacity: 0.7;
+}
+
+ol li {
+    font-weight: bold;
+}
+
+ul li {
+    font-weight: lighter;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 80%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal.active + .side-images-left,
+.modal.active + .side-images-right {
+    display: none;
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.form-container form {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-container label, .form-container input, .form-container textarea, .form-container .radio-group, .form-container .checkbox-group, .form-container .submit-btn {
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.radio-group, .checkbox-group {
+    font-size: 0.875rem;
+}
+
+.form-container .radio-group, .form-container .checkbox-group {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-container .submit-btn {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.form-container .submit-btn:hover {
+    background-color: #555;
+}
+
+.font-size-controls button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.font-size-controls button:hover {
+    background-color: #555;
+}
+
+aside {
+    background-color: #00c8d2;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 3px solid #00a4bd;
+}
+
+aside h3 {
+    color: #333;
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+figure {
+    margin: 0;
+    width: 100%;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.2em;
+}
+
+#highContrastToggle {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #555555;
+    color: #FFD700;
+    border: none;
+    cursor: pointer;
+}
+
+#highContrastToggle:hover {
+    background-color: #FF4500;
+}
+
+
+@media (min-width: 768px) {
+    body {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .main-content {
+        flex: 1;
+        margin-left: 15%;
+        margin-right: 15%;
+        max-width: calc(70% - 40px);
+        padding: 20px;
+    }
+
+    .side-images {
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 15%;
+        top: 0;
+        bottom: 0;
+    }
+
+    .side-images-left, .side-images-right {
+        flex: 0 0 15%;
+    }
+
+    .side-images img {
+        width: 100%;
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 767px) {
+    .side-images-left, .side-images-right {
+        display: none;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .main-content {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    table, th, td {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header, footer {
+        padding: 5px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .main-content {
+        padding: 5px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+.footer-content {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.contact-info, .support-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-info p, .support-info p {
+    margin: 2px 0;
+}
+
+.paypal-link img {
+    height: 40px;
+    width: auto;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 767px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .contact-info, .support-info {
+        align-items: center;
+    }
+
+    .paypal-link img {
+        height: 30px;
+    }
+}
+
+@media print {
+    header, footer, .side-images, .modal, nav, .footer-container, .video {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        max-width: 100%;
+        page-break-inside: avoid;
+    }
+
+    body {
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    table {
+        font-size: 8pt;
+    }
+
+    body, .main-content, table, th, td {
+        background: none;
+        color: black;
+        border: none;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 4px;
+    }
+
+    .main-content p, .main-content h3, .main-content section {
+        padding: 2px;
+    }
+}
